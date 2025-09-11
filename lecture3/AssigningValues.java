@@ -12,16 +12,16 @@ public class AssigningValues {
 		x = x + 5;
 		y = y + 1;
 		System.out.println("x = " + x);
-        System.out.println("y = " + y);
+		System.out.println("y = " + y);
 		// Increment x and y
 		x++;
 		y++;
 		System.out.println("x = " + x);
-        System.out.println("y = " + y);
+		System.out.println("y = " + y);
 		// Combine assignment and operation
 		y += 1; // instead you could have written y++;
 		x += y;
 		System.out.println("x = " + x);
-        System.out.println("y = " + y);
+		System.out.println("y = " + y);
 	}
 }
