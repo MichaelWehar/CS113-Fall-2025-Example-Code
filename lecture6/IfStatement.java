@@ -5,7 +5,7 @@ public class IfStatement {
 			return 10.50;
 		} else if(age >= 18) {
 			// Adult's pay full price
-			return  14.0;
+			return 14.0;
 		} else {
 			// Child discount
 			return 9.50;
