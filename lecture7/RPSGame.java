@@ -1,4 +1,5 @@
 // Remember to import Scanner!
+import java.util.Scanner;
 
 public class RPSGame {
 	/*
@@ -23,7 +24,15 @@ public class RPSGame {
 		// Fill this in using the Scanner class
 		// Should convert human entry to lowercase
 		// Should return "error" if input is invalid
-		return "error";
+		Scanner in = new Scanner(System.in);
+		System.out.println("Make your choice: ");
+		String choice = in.nextLine();
+		String lowerChoice = choice.toLowerCase();
+		if(lowerChoice.equals("rock") || lowerChoice.equals("paper") || lowerChoice.equals("scissors")) {
+			return lowerChoice;
+		} else {
+			return "error";
+		}
 	}
 	/*
 	 * Checks if the human won the game.
@@ -33,7 +42,15 @@ public class RPSGame {
 	 */
 	public static boolean humanIsTheWinner(String humanChoice, String computerChoice) {
 		// Fill this in using multicase format
-		return false;
+		if(humanChoice.equals("rock") && computerChoice.equals("scissors")) {
+			return true;
+		} else if(humanChoice.equals("paper") && computerChoice.equals("rock")) {
+			return true;
+		} else if(humanChoice.equals("scissors") && computerChoice.equals("paper")) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	/*
 	 * Runs the game code so that the user can play RPS.
@@ -53,7 +70,7 @@ public class RPSGame {
 			if(humanIsTheWinner(choice1, choice2)) {
 				System.out.println("Human wins! :)");
 			} else {
-				System.out.println("Computer wins. :(");
+				System.out.println("Computer wins [or there is a tie]. :(");
 			}
 		}
 	}
