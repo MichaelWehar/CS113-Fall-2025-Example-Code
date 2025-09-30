@@ -31,7 +31,9 @@ public class RPSGame {
 		if(lowerChoice.equals("rock") || lowerChoice.equals("paper") || lowerChoice.equals("scissors")) {
 			return lowerChoice;
 		} else {
-			return "error";
+			// Made recursive to reprompt the user
+			// if they entered an invalid input.
+			return askHuman();
 		}
 	}
 	/*

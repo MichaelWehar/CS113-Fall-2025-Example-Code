@@ -14,7 +14,7 @@ public class CharExample {
 		}
 		// You can get single chars from Strings
 		String s = "Hello World!";
-		System.out.println(s.charAt(1) + "" + s.charAt(2) + "" + s.charAt(3) + "" + s.charAt(4));
+		System.out.println("" + s.charAt(1) + s.charAt(2) + s.charAt(3) + s.charAt(4));
 		// Same as this!
 		System.out.println(s.substring(1, 5));
 	}

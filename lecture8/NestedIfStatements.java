@@ -26,17 +26,24 @@ public class NestedIfStatements {
 		}
 	}
 	public static boolean isASentenceAlternative(String s) {
-		// Try it out and we will discuss next time
-		return false;
+		int length = s.length();
+		if(length >= 5) {
+			String firstChar = s.substring(0, 1);
+			String lastChar = s.substring(length - 1, length);
+			return firstChar.toUpperCase().equals(firstChar) && 
+				(lastChar.equals(".") || lastChar.equals("?") || lastChar.equals("!"));
+		} else {
+			return false;
+		}
 	}
 	public static void main(String[] args) {
 		String a = "This is a test";
 		String b = "What about this?";
 		String c = "and could this be!";
 		String d = "Hi!";
-		System.out.println(isASentence(a));
-		System.out.println(isASentence(b));
-		System.out.println(isASentence(c));
-		System.out.println(isASentence(d));
+		System.out.println(isASentenceAlternative(a));
+		System.out.println(isASentenceAlternative(b));
+		System.out.println(isASentenceAlternative(c));
+		System.out.println(isASentenceAlternative(d));
 	}
 }
