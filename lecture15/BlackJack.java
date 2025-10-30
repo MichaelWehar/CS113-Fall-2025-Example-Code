@@ -60,7 +60,7 @@ public class BlackJack {
 		}
 		System.out.println("The dealer's hand is " + houseSum + ".");
 		// House gets more cards
-		while(mySum <= 21 && houseSum < 15 && houseSum < 21) {
+		while(mySum <= 21 && houseSum < 15) {
 			houseSum += getRandomCard();
 			System.out.println("The dealer's hand is " + houseSum + ".");
 		}
